@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/onBoard1Fragment">
+
+    <fragment
+        android:id="@+id/onBoard1Fragment"
+        android:name="com.example.cumpleonboard.onBoard1Fragment"
+        android:label="fragment_on_board1"
+        tools:layout="@layout/fragment_on_board1" >
+        <action
+            android:id="@+id/action_onBoard1Fragment_to_onBoard2Fragment"
+            app:destination="@id/onBoard2Fragment" />
+        <action
+            android:id="@+id/action_onBoard1Fragment_to_onBoard4Fragment"
+            app:destination="@id/onBoard4Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoard2Fragment"
+        android:name="com.example.cumpleonboard.onBoard2Fragment"
+        android:label="fragment_on_board2"
+        tools:layout="@layout/fragment_on_board2" >
+        <action
+            android:id="@+id/action_onBoard2Fragment_to_onBoard3Fragment"
+            app:destination="@id/onBoard3Fragment" />
+        <action
+            android:id="@+id/action_onBoard2Fragment_to_onBoard4Fragment"
+            app:destination="@id/onBoard4Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoard3Fragment"
+        android:name="com.example.cumpleonboard.onBoard3Fragment"
+        android:label="fragment_on_board3"
+        tools:layout="@layout/fragment_on_board3" >
+        <action
+            android:id="@+id/action_onBoard3Fragment_to_onBoard4Fragment"
+            app:destination="@id/onBoard4Fragment" />
+        <action
+            android:id="@+id/action_onBoard3Fragment_to_onBoard4Fragment2"
+            app:destination="@id/onBoard4Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoard4Fragment"
+        android:name="com.example.cumpleonboard.onBoard4Fragment"
+        android:label="fragment_on_board4"
+        tools:layout="@layout/fragment_on_board4" >
+        <action
+            android:id="@+id/action_onBoard4Fragment_to_onBoard5Fragment"
+            app:destination="@id/onBoard5Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoard5Fragment"
+        android:name="com.example.cumpleonboard.onBoard5Fragment"
+        android:label="fragment_on_board5"
+        tools:layout="@layout/fragment_on_board5" >
+        <action
+            android:id="@+id/action_onBoard5Fragment_to_onBoard4Fragment"
+            app:destination="@id/onBoard4Fragment" />
+    </fragment>
+</navigation>
