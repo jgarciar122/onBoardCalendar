@@ -20,11 +20,27 @@
         app:layout_constraintVertical_bias="0.161" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/buttonf3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Siguiente"
-        tools:layout_editor_absoluteX="151dp"
-        tools:layout_editor_absoluteY="596dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.887" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..... y celebra tranquilo tu cumpleaños"
+        android:textColor="#c2c033"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.773" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

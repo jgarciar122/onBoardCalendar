@@ -35,8 +35,17 @@ public class onBoard2Fragment extends Fragment {
             }
         });
 
+        binding.skipf2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavController navController = Navigation.findNavController(requireActivity(), R.id.fragmentContainerView);
+                navController.navigate(R.id.action_onBoard2Fragment_to_onBoard4Fragment);
+            }
+        });
+
         return view;
     }
+
 
     @Override
     public void onDestroyView() {
