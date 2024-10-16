@@ -21,7 +21,7 @@ public class onBoard4Fragment extends Fragment {
 
     private FragmentOnBoard4Binding binding;
     private NavController navController;
-    public static int selectedYear, selectedMonth, selectedDay;
+    public static int selectedYear = -1, selectedMonth = -1, selectedDay = -1;
 
     public onBoard4Fragment() {
     }
@@ -57,10 +57,10 @@ public class onBoard4Fragment extends Fragment {
                         if (year > Calendar.getInstance().get(Calendar.YEAR)) {
                             Toast.makeText(getContext(), "El año no puede ser mayor que el año actual.", Toast.LENGTH_SHORT).show();
                         } else if (year == Calendar.getInstance().get(Calendar.YEAR) && dayOfMonth > day) {
-                            // Verifica si es el año actual y el día es mayor al día actual
                             Toast.makeText(getContext(), "La fecha no puede ser mayor a la actual", Toast.LENGTH_SHORT).show();
                         } else {
-                            binding.FechaNacText.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
+                            String fechaSeleccionada = dayOfMonth + "/" + (month + 1) + "/" + year;
+                            binding.FechaNacText.setText(fechaSeleccionada);
                             selectedYear = year;
                             selectedMonth = month;
                             selectedDay = dayOfMonth;
@@ -76,10 +76,11 @@ public class onBoard4Fragment extends Fragment {
         binding.buttonf4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (selectedYear > Calendar.getInstance().get(Calendar.YEAR)) {
+                if (selectedYear == -1 || selectedMonth == -1 || selectedDay == -1) {
+                    Toast.makeText(getContext(), "Por favor, selecciona una fecha de nacimiento.", Toast.LENGTH_SHORT).show();
+                } else if (selectedYear > Calendar.getInstance().get(Calendar.YEAR)) {
                     Toast.makeText(getContext(), "Selecciona una fecha de nacimiento válida.", Toast.LENGTH_SHORT).show();
                 } else {
-                    // Asegúrate de que la fecha es válida antes de navegar
                     if (selectedYear == Calendar.getInstance().get(Calendar.YEAR) && selectedDay > Calendar.getInstance().get(Calendar.DAY_OF_MONTH)) {
                         Toast.makeText(getContext(), "La fecha no puede ser mayor a la actual", Toast.LENGTH_SHORT).show();
                     } else {
