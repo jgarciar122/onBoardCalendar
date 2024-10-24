@@ -12,11 +12,16 @@
         tools:layout="@layout/fragment_on_board1" >
         <action
             android:id="@+id/action_onBoard1Fragment_to_onBoard2Fragment"
-            app:destination="@id/onBoard2Fragment" />
+            app:destination="@id/onBoard2Fragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"/>
         <action
             android:id="@+id/action_onBoard1Fragment_to_onBoard4Fragment"
-            app:destination="@id/onBoard4Fragment" />
+            app:destination="@id/onBoard4Fragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"/>
     </fragment>
+
     <fragment
         android:id="@+id/onBoard2Fragment"
         android:name="com.example.cumpleonboard.onBoard2Fragment"
@@ -24,11 +29,16 @@
         tools:layout="@layout/fragment_on_board2" >
         <action
             android:id="@+id/action_onBoard2Fragment_to_onBoard3Fragment"
-            app:destination="@id/onBoard3Fragment" />
+            app:destination="@id/onBoard3Fragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"/>
         <action
             android:id="@+id/action_onBoard2Fragment_to_onBoard4Fragment"
-            app:destination="@id/onBoard4Fragment" />
+            app:destination="@id/onBoard4Fragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"/>
     </fragment>
+
     <fragment
         android:id="@+id/onBoard3Fragment"
         android:name="com.example.cumpleonboard.onBoard3Fragment"
@@ -36,11 +46,16 @@
         tools:layout="@layout/fragment_on_board3" >
         <action
             android:id="@+id/action_onBoard3Fragment_to_onBoard4Fragment"
-            app:destination="@id/onBoard4Fragment" />
+            app:destination="@id/onBoard4Fragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"/>
         <action
             android:id="@+id/action_onBoard3Fragment_to_onBoard4Fragment2"
-            app:destination="@id/onBoard4Fragment" />
+            app:destination="@id/onBoard4Fragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"/>
     </fragment>
+
     <fragment
         android:id="@+id/onBoard4Fragment"
         android:name="com.example.cumpleonboard.onBoard4Fragment"
@@ -48,8 +63,11 @@
         tools:layout="@layout/fragment_on_board4" >
         <action
             android:id="@+id/action_onBoard4Fragment_to_onBoard5Fragment"
-            app:destination="@id/onBoard5Fragment" />
+            app:destination="@id/onBoard5Fragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"/>
     </fragment>
+
     <fragment
         android:id="@+id/onBoard5Fragment"
         android:name="com.example.cumpleonboard.onBoard5Fragment"
@@ -57,6 +75,9 @@
         tools:layout="@layout/fragment_on_board5" >
         <action
             android:id="@+id/action_onBoard5Fragment_to_onBoard4Fragment"
-            app:destination="@id/onBoard4Fragment" />
+            app:destination="@id/onBoard4Fragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"/>
     </fragment>
+
 </navigation>
